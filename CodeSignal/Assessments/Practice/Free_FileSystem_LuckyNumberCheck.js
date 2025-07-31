@@ -33,21 +33,8 @@ Lucky!
  */
 const isLucky = (x) => {
     // TODO
-    return x % 7 === 0 || x.toString().includes('7');
-  };
-  
-  module.exports = {
-      isLucky,
-  };
-
+   
 
 // LuckyNumberPrinter.js
 const { isLucky } = require('./luckyChecker.js');
-
-for (let i = 1; i <= 100; i++) {
-    if (isLucky(i)) {
-        console.log(`Lucky!`)
-    } else {
-        console.log(i);
-    }
-}
+    //TODO
