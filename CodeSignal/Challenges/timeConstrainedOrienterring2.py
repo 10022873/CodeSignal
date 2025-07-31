@@ -19,6 +19,5 @@
 #                       [4, 0, 2],
 #                       [4, 4, 0]]
 
-
 def solution(n, roads):
   
