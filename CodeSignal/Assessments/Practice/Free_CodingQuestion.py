@@ -23,11 +23,3 @@ Can you write a program that generates this pyramid with a N value of 10?
 print('Hello')
 
 
-def pyramid(n):
-    for i in range(n):
-        spaces = ' ' * (n - i - 1)
-        stars = '*' * (2 * i + 1)
-        print(spaces + stars + spaces)
-        
-        
-pyramid(20)
