@@ -19,15 +19,6 @@
 # 7 cells have at least one common point with the diagonal and are painted black.
 
 def gcd(a, b):
-    if a == 0:
-        return b
-    if b == 0:
-        return a
-    return gcd(a % b, b) if a > b else gcd(a, b % a)
+
 
 def solution(n, m):
-    if n == m:
-        return n + 2 * (n - 1)
-    if n == 1 or m == 1:
-        return n * m
-    return n + m - gcd(n, m) + (gcd(n, m) - 1) * 2
