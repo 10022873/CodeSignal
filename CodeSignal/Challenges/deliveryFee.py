@@ -74,32 +74,3 @@
 
 
 
-def solution(intervals, fees, deliveries):
-    # Create a list to store the number of deliveries in each interval
-    deliveries_in_interval = [0] * len(intervals)
-    
-    # Calculate the number of deliveries in each interval
-    for delivery in deliveries:
-        hour = delivery[0]
-        for i in range(len(intervals) - 1):
-            if intervals[i] <= hour < intervals[i + 1]:
-                deliveries_in_interval[i] += 1
-                break
-        else:
-            deliveries_in_interval[-1] += 1
-    
-    # Calculate the ratio of the delivery fee to the number of deliveries for the first interval
-    if deliveries_in_interval[0] == 0:
-        ratio = 0
-    else:
-        ratio = fees[0] / deliveries_in_interval[0]
-    
-    # Check if the ratio is the same for all intervals
-    for i in range(1, len(intervals)):
-        if deliveries_in_interval[i] == 0:
-            if fees[i] != 0:
-                return False
-        elif fees[i] / deliveries_in_interval[i] != ratio:
-            return False
-    
-    return True
