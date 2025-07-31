@@ -21,21 +21,4 @@
 
 
 def solution(n, roads):
-    # Copy the roads matrix to avoid modifying the original
-    r = [row[:] for row in roads]
-
-    for i in range(n):
-        for j in range(n):
-            for k in range(n):
-                a = r[j][i]
-                b = r[i][k]
-                c = r[j][k]
-                d = max(a, b)
-
-                # Check if there is a path from j to i and from i to k
-                if a != -1 and b != -1:
-                    # If there is no direct path from j to k or the direct path is longer than the path through i
-                    if c == -1 or c > d:
-                        r[j][k] = d
-
-    return r
+  
